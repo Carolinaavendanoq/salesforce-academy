@@ -142,11 +142,11 @@
                         <legend>Información Personal</legend>
                         <label for="first_name">Nombre:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                         <br>
-                        <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" required/><br>
+                        <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" onkeypress="return ((event.charCode == 32) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" required/><br>
                 
                         <label for="last_name">Apellidos:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                         <br>
-                        <input  id="last_name" maxlength="80" name="last_name" size="20" type="text" onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" required/><br>
+                        <input  id="last_name" maxlength="80" name="last_name" size="20" type="text"onkeypress="return ((event.charCode == 32) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" required/><br>
             
                         <label for="00NDn00000FTR2t">Tipo de Identificación:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                         <br>

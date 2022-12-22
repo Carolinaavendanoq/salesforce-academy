@@ -124,6 +124,8 @@
                     <option value="Web" selected = "true">Web</option>
                     <option value="Other">Other</option>
                 </select><br>
+
+                <input  id="company" maxlength="40" name="company" size="20" type="text" value="E-volution" class="check"/><br>
                     
                 
             
@@ -140,11 +142,11 @@
                         <legend>Información Personal</legend>
                         <label for="first_name">Nombre:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                         <br>
-                        <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" required/><br>
+                        <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" required/><br>
                 
                         <label for="last_name">Apellidos:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                         <br>
-                        <input  id="last_name" maxlength="80" name="last_name" size="20" type="text" required/><br>
+                        <input  id="last_name" maxlength="80" name="last_name" size="20" type="text" onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" required/><br>
             
                         <label for="00NDn00000FTR2t">Tipo de Identificación:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                         <br>
@@ -157,12 +159,12 @@
             
                         <label for="00NDn00000FTR2y">Número de Identificación:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                         <br>
-                        <input  id="00NDn00000FTR2y" maxlength="20" name="00NDn00000FTR2y" size="20" type="text" required/><br>
+                        <input  id="00NDn00000FTR2y" maxlength="20" name="00NDn00000FTR2y" size="20" type="number" required/><br>
             
                         <label for="00NDn00000FTTBH">Fecha de nacimiento:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                         <br>
                         <span class="dateInput dateOnlyInput">
-                            <input  id="00NDn00000FTTBH" name="00NDn00000FTTBH" size="12" type="text" required placeholder="DD/MM/AAAA"/>
+                            <input  id="00NDn00000FTTBH" name="00NDn00000FTTBH" size="12" type="text" required onkeypress="return ((event.charCode == 47) || (event.charCode >= 48 && event.charCode <= 57)) " placeholder="DD/MM/AAAA"/>
                         </span><br>
                     </fieldset>
                     <fieldset>
@@ -173,7 +175,7 @@
             
                         <label for="phone">Teléfono<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                         <br>
-                        <input  id="phone" maxlength="40" name="phone" size="20" type="tel" required/><br>
+                        <input  id="phone" maxlength="40" name="phone" size="20" type="tel" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" required/><br>
                 
                         <label for="00NDn00000FTrRm">Departamento de residencia<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                         <br>
@@ -217,7 +219,6 @@
                 
                         <label for="00NDn00000FUJYt">Ciudad de residencia<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                         <br>
-                        <!--<input  id="00NDn00000FUJYt" maxlength="40" name="00NDn00000FUJYt" size="20" type="text" required/><br>-->
 
                         <select name="00NDn00000FUJYt" id="00NDn00000FUJYt" required title="Ciudad de residencia">
                             
@@ -301,6 +302,11 @@
                             <option value="Javascript">Javascript</option>
                             <option value="C#">C#</option>
                             <option value="C++">C++</option>
+                            <option value="PHP">PHP</option>
+                            <option value="React">React</option>
+                            <option value="HTML">HTML</option>
+                            <option value="CSS">CSS</option>
+                            <option value="SQL">SQL</option>
                         </select><br>
                     </fieldset>
                     <fieldset>
@@ -323,15 +329,15 @@
                 
                             <label for="00NDn00000FTTtg">Jefe inmediato:</label>
                             <br>
-                            <input  id="00NDn00000FTTtg" maxlength="255" name="00NDn00000FTTtg" size="20" type="text" /><br>
+                            <input  id="00NDn00000FTTtg" maxlength="255" name="00NDn00000FTTtg" size="20" type="text" onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))"/><br>
                 
                             <label for="00NDn00000FTUFZ">Fecha de inicio:</label>
                             <br>
-                            <span class="dateInput dateOnlyInput"><input  id="00NDn00000FTUFZ" name="00NDn00000FTUFZ" size="12" type="text" placeholder="DD/MM/AAAA" /></span><br>
+                            <span class="dateInput dateOnlyInput"><input  id="00NDn00000FTUFZ" name="00NDn00000FTUFZ" size="12" type="text" placeholder="DD/MM/AAAA" onkeypress="return ((event.charCode == 47) || (event.charCode >= 48 && event.charCode <= 57)) "/></span><br>
                 
                             <label for="00NDn00000FTUJw">Fecha de finalización:</label>
                             <br>
-                            <span class="dateInput dateOnlyInput"><input  id="00NDn00000FTUJw" name="00NDn00000FTUJw" size="12" type="text" placeholder="DD/MM/AAAA" /></span><br>
+                            <span class="dateInput dateOnlyInput"><input  id="00NDn00000FTUJw" name="00NDn00000FTUJw" size="12" type="text" placeholder="DD/MM/AAAA" onkeypress="return ((event.charCode == 47) || (event.charCode >= 48 && event.charCode <= 57)) "/></span><br>
 
                             <label for="00NDn00000FTTsx">Nombre de la empresa:</label>
                             <br>
@@ -343,16 +349,16 @@
                             
                             <label for="00NDn00000FTU75">Jefe inmediato</label>
                             <br>
-                            <input  id="00NDn00000FTU75" maxlength="255" name="00NDn00000FTU75" size="20" type="text" /><br>
+                            <input  id="00NDn00000FTU75" maxlength="255" name="00NDn00000FTU75" size="20" type="text" onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))"/><br>
                     
                             <label for="00NDn00000FTUJr">Fecha de inicio</label>
                             <br>
                             <span class="dateInput dateOnlyInput">
-                                <input  id="00NDn00000FTUJr" name="00NDn00000FTUJr" size="12" type="text" placeholder="DD/MM/AAAA" /></span><br>
+                                <input  id="00NDn00000FTUJr" name="00NDn00000FTUJr" size="12" type="text" placeholder="DD/MM/AAAA" onkeypress="return ((event.charCode == 47) || (event.charCode >= 48 && event.charCode <= 57)) "/></span><br>
                     
                             <label for="00NDn00000FTUK6">Fecha de finalización</label>
                             <br>
-                            <span class="dateInput dateOnlyInput"><input  id="00NDn00000FTUK6" name="00NDn00000FTUK6" size="12" type="text" placeholder="DD/MM/AAAA" /></span><br>
+                            <span class="dateInput dateOnlyInput"><input  id="00NDn00000FTUK6" name="00NDn00000FTUK6" size="12" type="text" placeholder="DD/MM/AAAA" onkeypress="return ((event.charCode == 47) || (event.charCode >= 48 && event.charCode <= 57)) "/></span><br>
                         </div>
                     </fieldset>
                 </section>

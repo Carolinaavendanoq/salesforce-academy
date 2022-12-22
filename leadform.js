@@ -27,6 +27,7 @@ function mostrarExpLaboral() {
         document.getElementById('experiencia-laboral').style.display = 'none';
     }
 }
+
  /*
 function verFecha() {
     

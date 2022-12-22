@@ -86,7 +86,7 @@ legend{
 }
 
 .fondo-azul p, .fondo-azul ul, .fondo-gris p, .fondo-gris ul{
-    font-size: 20px; 
+    font-size: 22px; 
     font-weight: 300;
 }
 
@@ -157,7 +157,7 @@ legend{
     repeating-linear-gradient(#41FBFF, #1CC8EA);
     background-color: #118CD5;
     background-blend-mode: multiply;
-    padding: 150px 10px 20px;
+    padding: 225px 10px 20px;
 }
 
 .fondo-azul, .fondo-gris{
@@ -170,7 +170,7 @@ legend{
 }
 
 .invitacion, .presentacion, .publico-objetivo, .beneficios, .proceso-seleccion,.terminos-condiciones, .divide-pag{
-    width: 50%;
+    width: 750px;
     margin: auto;
 }
 
@@ -180,8 +180,9 @@ legend{
 
 .divide-pag{
     position: relative;
-    left: 460px;
-    top: 200px;
+    left: 410px;
+    top: 250px;
+    width: 1070px;
 }
 
 #titulo-aspira, #experiencia-laboral, #lead_source, .check, #formulario, #msj-impedimento{
@@ -200,4 +201,3 @@ blockquote{
     letter-spacing: -0.2px;
     word-spacing: -2px;
 }
-

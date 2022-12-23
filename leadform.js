@@ -1,3 +1,39 @@
+document.querySelectorAll(".fecha-elegida").forEach(fechita => fechita.addEventListener("change", e => {
+    const identificador = e.target.getAttribute("id");
+    console.log(identificador);
+    let fecha = document.getElementById(identificador);
+    let valorFecha = fecha.value;
+    
+    let fechaSinGuion = valorFecha.split('-');
+    
+    let fechaReversada = fechaSinGuion.reverse();
+    
+    let fechaFormateada = fechaReversada.join('/');
+
+
+    switch (identificador) {
+            case "fecha-nacimiento":
+                    document.getElementById("00NDn00000FTTBH").value = fechaFormateada;
+                    break;
+            case "fecha-inicio":
+                    document.getElementById("00NDn00000FTUFZ").value = fechaFormateada;
+                    break;
+            case "fecha-finalizacion":
+                document.getElementById("00NDn00000FTUJw").value = fechaFormateada;
+                break;
+            case "fecha-inicio2":
+                document.getElementById("00NDn00000FTUJr").value = fechaFormateada;
+                break;
+            case "fecha-finalizacion2":
+                document.getElementById("00NDn00000FTUK6").value = fechaFormateada;
+                break;
+            default:
+                    break;
+    }
+
+
+}))
+
 function mostrarEducActual() {
     let seleccion = document.getElementById("00NDn00000FTTMv").value;
     
@@ -27,25 +63,16 @@ function mostrarExpLaboral() {
         document.getElementById('experiencia-laboral').style.display = 'none';
     }
 }
-
- /*
+/*
 function verFecha() {
-    
- 
-    document.querySelectorAll('.fechas').forEach(function cambiarForato(fecha) {
-        let valorFecha = fecha.value;
-        let fechaSinGuion = valorFecha.split('-');
-        let fechaReversada = fechaSinGuion.reverse();
-        let fechaFormateada = fechaReversada.join('/');
-        document
-    });
+    let fecha = document.getElementById("fecha-nacimiento");
+    let valorFecha = fecha.value;
+    let fechaSinGuion = valorFecha.split('-');
+    let fechaReversada = fechaSinGuion.reverse();
+    let fechaFormateada = fechaReversada.join('/');
 
-    let words = valorFecha.split('-');
-    let reversedFehca = words.reverse();
-    let fechaFinal = reversedFehca.join('/');
-    
-}
-*/
+    document.getElementById("00NDn00000FTTBH").value = fechaFormateada;
+}*/
 
 function cargarCiudades() {
     let listaCiudades = {

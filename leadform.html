@@ -142,11 +142,11 @@
                         <legend>Información Personal</legend>
                         <label for="first_name">Nombre:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                         <br>
-                        <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" onkeypress="return ((event.charCode == 32) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" required/><br>
+                        <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" onkeypress="return ((event.charCode == 32) || (event.charCode == 209) || (event.charCode == 241) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" required/><br>
                 
                         <label for="last_name">Apellidos:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                         <br>
-                        <input  id="last_name" maxlength="80" name="last_name" size="20" type="text"onkeypress="return ((event.charCode == 32) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" required/><br>
+                        <input  id="last_name" maxlength="80" name="last_name" size="20" type="text" onkeypress="return ((event.charCode == 32) || (event.charCode == 209) || (event.charCode == 241) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" required/><br>
             
                         <label for="00NDn00000FTR2t">Tipo de Identificación:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                         <br>
@@ -161,10 +161,12 @@
                         <br>
                         <input  id="00NDn00000FTR2y" maxlength="20" name="00NDn00000FTR2y" size="20" type="number" required/><br>
             
-                        <label for="00NDn00000FTTBH">Fecha de nacimiento:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
+                        <label for="fecha-nacimiento">Fecha de nacimiento:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                         <br>
+                        <input id="fecha-nacimiento" type="date" class="fecha-elegida" required>
+
                         <span class="dateInput dateOnlyInput">
-                            <input  id="00NDn00000FTTBH" name="00NDn00000FTTBH" size="12" type="text" required onkeypress="return ((event.charCode == 47) || (event.charCode >= 48 && event.charCode <= 57)) " placeholder="DD/MM/AAAA"/>
+                            <input  id="00NDn00000FTTBH" name="00NDn00000FTTBH" size="12" type="text" class="check"/>
                         </span><br>
                     </fieldset>
                     <fieldset>
@@ -323,21 +325,28 @@
                             <br>
                             <input  id="00NDn00000FTTsi" maxlength="255" name="00NDn00000FTTsi" size="20" type="text" /><br>
                         
-                            <label for="00NDn00000FTTtH">Cargo:</label>
+                            <label for="title">Cargo:</label>
                             <br>
-                            <input  id="00NDn00000FTTtH" maxlength="255" name="00NDn00000FTTtH" size="20" type="text" /><br>
+                            <input  id="title" maxlength="255" name="title" size="20" type="text" /><br>
                 
                             <label for="00NDn00000FTTtg">Jefe inmediato:</label>
                             <br>
-                            <input  id="00NDn00000FTTtg" maxlength="255" name="00NDn00000FTTtg" size="20" type="text" onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))"/><br>
+                            <input  id="00NDn00000FTTtg" maxlength="255" name="00NDn00000FTTtg" size="20" type="text" oonkeypress="return ((event.charCode == 32) || (event.charCode == 209) || (event.charCode == 241) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))"/><br>
                 
-                            <label for="00NDn00000FTUFZ">Fecha de inicio:</label>
+                            <label for="fecha-inicio">Fecha de inicio:</label>
                             <br>
-                            <span class="dateInput dateOnlyInput"><input  id="00NDn00000FTUFZ" name="00NDn00000FTUFZ" size="12" type="text" placeholder="DD/MM/AAAA" onkeypress="return ((event.charCode == 47) || (event.charCode >= 48 && event.charCode <= 57)) "/></span><br>
+                            <input id="fecha-inicio" type="date"  class="fecha-elegida">
+                            <span class="dateInput dateOnlyInput">
+                                <input  id="00NDn00000FTUFZ" name="00NDn00000FTUFZ" size="12" type="text" class="check" />
+                            </span><br>
                 
-                            <label for="00NDn00000FTUJw">Fecha de finalización:</label>
+                            <label for="fecha-finalizacion">Fecha de finalización:</label>
                             <br>
-                            <span class="dateInput dateOnlyInput"><input  id="00NDn00000FTUJw" name="00NDn00000FTUJw" size="12" type="text" placeholder="DD/MM/AAAA" onkeypress="return ((event.charCode == 47) || (event.charCode >= 48 && event.charCode <= 57)) "/></span><br>
+                            <input id="fecha-finalizacion" type="date" class="fecha-elegida" >
+
+                            <span class="dateInput dateOnlyInput">
+                                <input  id="00NDn00000FTUJw" name="00NDn00000FTUJw" size="12" type="text" class="check"/>
+                            </span><br>
 
                             <label for="00NDn00000FTTsx">Nombre de la empresa:</label>
                             <br>
@@ -347,18 +356,23 @@
                             <br>
                             <input  id="00NDn00000FTTtb" maxlength="255" name="00NDn00000FTTtb" size="20" type="text" /><br>
                             
-                            <label for="00NDn00000FTU75">Jefe inmediato</label>
+                            <label for="00NDn00000FTU75">Jefe inmediato:</label>
                             <br>
-                            <input  id="00NDn00000FTU75" maxlength="255" name="00NDn00000FTU75" size="20" type="text" onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))"/><br>
+                            <input  id="00NDn00000FTU75" maxlength="255" name="00NDn00000FTU75" size="20" type="text" onkeypress="return ((event.charCode == 32) || (event.charCode == 209) || (event.charCode == 241) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))"/><br>
                     
-                            <label for="00NDn00000FTUJr">Fecha de inicio</label>
+                            <label for="fecha-inicio2">Fecha de inicio:</label>
                             <br>
+                            <input id="fecha-inicio2" type="date" class="fecha-elegida">
                             <span class="dateInput dateOnlyInput">
-                                <input  id="00NDn00000FTUJr" name="00NDn00000FTUJr" size="12" type="text" placeholder="DD/MM/AAAA" onkeypress="return ((event.charCode == 47) || (event.charCode >= 48 && event.charCode <= 57)) "/></span><br>
+                                <input  id="00NDn00000FTUJr" name="00NDn00000FTUJr" size="12" type="text" class="check"/>
+                            </span><br>
                     
-                            <label for="00NDn00000FTUK6">Fecha de finalización</label>
+                            <label for="fecha-finalizacion2">Fecha de finalización: </label>
                             <br>
-                            <span class="dateInput dateOnlyInput"><input  id="00NDn00000FTUK6" name="00NDn00000FTUK6" size="12" type="text" placeholder="DD/MM/AAAA" onkeypress="return ((event.charCode == 47) || (event.charCode >= 48 && event.charCode <= 57)) "/></span><br>
+                            <input id="fecha-finalizacion2" type="date" class="fecha-elegida">
+                            <span class="dateInput dateOnlyInput">
+                                <input  id="00NDn00000FTUK6" name="00NDn00000FTUK6" size="12" type="text" class="check"/>
+                            </span><br>
                         </div>
                     </fieldset>
                 </section>

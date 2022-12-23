@@ -202,3 +202,7 @@ blockquote{
     word-spacing: -2px;
 }
 
+
+.multiple{
+    text-transform:capitalize;
+}

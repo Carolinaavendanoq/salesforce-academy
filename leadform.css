@@ -59,6 +59,8 @@ input, select{
     height: 32px;
     border-color: #b8cddc;
     color: #2c3345;
+    margin-top: 0px;
+    margin-bottom: 5px;
 }
 
 label{
@@ -68,13 +70,16 @@ label{
     font-size: 11px;
     letter-spacing: 0.5px;
     line-height: 1.5;
-    margin-bottom: 4px;
+    margin-top: 5px;
+    margin-bottom: 0px;
 }
 
 legend{
     color: #0075d2;
     font-size: 11px;
     font-weight: 500;
+    margin-top: 0px;
+    margin-bottom: 5px;
 }
 
 .fondo-azul p, .fondo-azul ul{
@@ -157,7 +162,7 @@ legend{
     repeating-linear-gradient(#41FBFF, #1CC8EA);
     background-color: #118CD5;
     background-blend-mode: multiply;
-    padding: 225px 10px 20px;
+    padding: 10px 10px 20px;
 }
 
 .fondo-azul, .fondo-gris{
@@ -185,7 +190,7 @@ legend{
     width: 1070px;
 }
 
-#titulo-aspira, #experiencia-laboral, #lead_source, .check, #formulario, #msj-impedimento{
+#titulo-aspira, #experiencia-laboral, #lead_source, .check{
     display: none;
 }
 
@@ -205,4 +210,53 @@ blockquote{
 
 .multiple{
     text-transform:capitalize;
+}
+
+.field-set-uno{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 2px;
+}
+
+.fiel-set-dos{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media screen and (max-width: 400px){
+    .content-section{
+        display: flex;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    form{
+        background-color: #FFFFFF;
+        width: 90%;
+        margin: 20px auto;
+        filter: drop-shadow(-1px -1px #F5F8FA) drop-shadow(0 1px #F1F5F8) drop-shadow(0 1px #EEF3F7) drop-shadow(0 1px #EAF0F5) drop-shadow(1px 1px #E3EBF1) drop-shadow(1px 1px #DCE6EE) drop-shadow(1px 1px #D1DFE9) drop-shadow(1px 1px #CDDBE6) drop-shadow(0px 0px 8px rgba(128, 145, 160, 0.5));
+        border: 1px solid #EEF2F6;
+    }
+    .seccion-1, .seccion-2, #msj-impedimento{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 600px){
+    .content-section{
+        display: flex;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    form{
+        background-color: #FFFFFF;
+        width: 90%;
+        margin: 20px auto;
+        filter: drop-shadow(-1px -1px #F5F8FA) drop-shadow(0 1px #F1F5F8) drop-shadow(0 1px #EEF3F7) drop-shadow(0 1px #EAF0F5) drop-shadow(1px 1px #E3EBF1) drop-shadow(1px 1px #DCE6EE) drop-shadow(1px 1px #D1DFE9) drop-shadow(1px 1px #CDDBE6) drop-shadow(0px 0px 8px rgba(128, 145, 160, 0.5));
+        border: 1px solid #EEF2F6;
+    }
+    .seccion-1, .seccion-2, #msj-impedimento{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
 }

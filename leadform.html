@@ -40,110 +40,103 @@
             <!--  <input type="hidden" name="debugEmail"                                  -->
             <!--  value="academyevolution2022@gmail.com">                                 -->
             <!--  ----------------------------------------------------------------------  -->
-                
-            <div class="content-section">
                 <section class="seccion-1">
                     <fieldset>
-                        <div class="field-set-uno">
-                            <legend>Información Personal</legend>
-                            <label for="first_name">Nombre:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
-                            <br>
-                            <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" onkeypress="return ((event.charCode == 32) || (event.charCode == 209) || (event.charCode == 241) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" required/><br>
-                    
-                            <label for="last_name">Apellidos:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
-                            <br>
-                            <input  id="last_name" maxlength="80" name="last_name" size="20" type="text" onkeypress="return ((event.charCode == 32) || (event.charCode == 209) || (event.charCode == 241) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" required/><br>
+                        <legend>Información Personal</legend>
+                        <label for="first_name">Nombre:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
+                        <br>
+                        <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" onkeypress="return ((event.charCode == 32) || (event.charCode == 209) || (event.charCode == 241) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" required/><br>
                 
-                            <label for="00NDn00000FTR2t">Tipo de Identificación:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
-                            <br>
-                            <select  id="00NDn00000FTR2t" name="00NDn00000FTR2t" title="Tipo de Identificación" required>
-                                <option value="">--Elija una Opción--</option>
-                                <option value="Tarjeta de Identidad">Tarjeta de Identidad</option>
-                                <option value="Cédula de Ciudadanía">Cédula de Ciudadanía</option>
-                                <option value="Cédula de Extranjería">Cédula de Extranjería</option>
-                            </select><br>
-                
-                            <label for="00NDn00000FTR2y">Número de Identificación:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
-                            <br>
-                            <input  id="00NDn00000FTR2y" maxlength="20" name="00NDn00000FTR2y" size="20" type="number" required/><br>
-                
-                            <label for="fecha-nacimiento">Fecha de nacimiento:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
-                            <br>
-                            <input id="fecha-nacimiento" type="date" class="fecha-elegida" required>
-    
-                            <!--
-                                falta campo para que guarde el valor
-                            -->
-                            <label for="">Aspiración Salarial:<abbr title="Requerido" aria-label="Requerido">  </abbr></label>
-                            <br>
-                            <input  id="" maxlength="20" name="" size="20" type="number" /><br>
-    
-                            <span class="dateInput dateOnlyInput">
-                                <input  id="00NDn00000FTTBH" name="00NDn00000FTTBH" size="12" type="text" class="check"/>
-                            </span><br>
-                        </div>
+                        <label for="last_name">Apellidos:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
+                        <br>
+                        <input  id="last_name" maxlength="80" name="last_name" size="20" type="text" onkeypress="return ((event.charCode == 32) || (event.charCode == 209) || (event.charCode == 241) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" required/><br>
+            
+                        <label for="00NDn00000FTR2t">Tipo de Identificación:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
+                        <br>
+                        <select  id="00NDn00000FTR2t" name="00NDn00000FTR2t" title="Tipo de Identificación" required>
+                            <option value="">--Elija una Opción--</option>
+                            <option value="Tarjeta de Identidad">Tarjeta de Identidad</option>
+                            <option value="Cédula de Ciudadanía">Cédula de Ciudadanía</option>
+                            <option value="Cédula de Extranjería">Cédula de Extranjería</option>
+                        </select><br>
+            
+                        <label for="00NDn00000FTR2y">Número de Identificación:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
+                        <br>
+                        <input  id="00NDn00000FTR2y" maxlength="20" name="00NDn00000FTR2y" size="20" type="number" required/><br>
+            
+                        <label for="fecha-nacimiento">Fecha de nacimiento:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
+                        <br>
+                        <input id="fecha-nacimiento" type="date" class="fecha-elegida" required>
+
+                        <!--
+                            falta campo para que guarde el valor
+                        -->
+                        <label for="">Aspiración Salarial:<abbr title="Requerido" aria-label="Requerido">  </abbr></label>
+                        <br>
+                        <input  id="" maxlength="20" name="" size="20" type="number" /><br>
+
+                        <span class="dateInput dateOnlyInput">
+                            <input  id="00NDn00000FTTBH" name="00NDn00000FTTBH" size="12" type="text" class="check"/>
+                        </span><br>
                     </fieldset>
                     <fieldset>
-                        <div class="fiel-set-dos">
-                                <legend>Información de contacto</legend>
-                                <label for="email">Correo electrónico<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
-                                <br>
-                                <input  id="email" maxlength="80" name="email" size="20" type="email" required/><br>
-                    
-                                <label for="phone">Teléfono<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
-                                <br>
-                                <input  id="phone" maxlength="40" name="phone" size="20" type="tel" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" required/><br>
-                        
-                                <label for="00NDn00000FTrRm">Departamento de residencia<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
-                                <br>
-                                <select  id="00NDn00000FTrRm" name="00NDn00000FTrRm" title="Departamento de residencia" required onchange="cargarCiudades();">
-                                    <option value="">--Elija una Opción--</option>
-                                    <option value="Amazonas">Amazonas</option>
-                                    <option value="Antioquia">Antioquia</option>
-                                    <option value="Arauca">Arauca</option>
-                                    <option value="Atlántico">Atlántico</option>
-                                    <option value="Bogotá D.C.">Bogotá D.C.</option>
-                                    <option value="Bolívar">Bolívar</option>
-                                    <option value="Boyacá">Boyacá</option>
-                                    <option value="Caldas">Caldas</option>
-                                    <option value="Caquetá">Caquetá</option>
-                                    <option value="Casanare">Casanare</option>
-                                    <option value="Cauca">Cauca</option>
-                                    <option value="Cesar">Cesar</option>
-                                    <option value="Chocó">Chocó</option>
-                                    <option value="Córdoba">Córdoba</option>
-                                    <option value="Cundinamarca">Cundinamarca</option>
-                                    <option value="Guainía">Guainía</option>
-                                    <option value="Guaviare">Guaviare</option>
-                                    <option value="Huila">Huila</option>
-                                    <option value="La Guajira">La Guajira</option>
-                                    <option value="Magdalena">Magdalena</option>
-                                    <option value="Meta">Meta</option>
-                                    <option value="Nariño">Nariño</option>
-                                    <option value="Norte de Santander">Norte de Santander</option>
-                                    <option value="Putumayo">Putumayo</option>
-                                    <option value="Quindío">Quindío</option>
-                                    <option value="Risaralda">Risaralda</option>
-                                    <option value="San Andrés y Providencia">San Andrés y Providencia</option>
-                                    <option value="Santander">Santander</option>
-                                    <option value="Sucre">Sucre</option>
-                                    <option value="Tolima">Tolima</option>
-                                    <option value="Valle del Cauca">Valle del Cauca</option>
-                                    <option value="Vaupés">Vaupés</option>
-                                    <option value="Vichada">Vichada</option>
-                                </select><br>
-                                    
-                        
-                                <label for="00NDn00000FUJYt">Ciudad de residencia<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
-                                <br>
-        
-                                <select name="00NDn00000FUJYt" id="00NDn00000FUJYt" required title="Ciudad de residencia">
-                                    
-                                </select>
-        
-                            </fieldset>
-                        </div>
-            </div>
+                        <legend>Información de contacto</legend>
+                        <label for="email">Correo electrónico<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
+                        <br>
+                        <input  id="email" maxlength="80" name="email" size="20" type="email" required/><br>
+            
+                        <label for="phone">Teléfono<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
+                        <br>
+                        <input  id="phone" maxlength="40" name="phone" size="20" type="tel" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" required/><br>
+                
+                        <label for="00NDn00000FTrRm">Departamento de residencia<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
+                        <br>
+                        <select  id="00NDn00000FTrRm" name="00NDn00000FTrRm" title="Departamento de residencia" required onchange="cargarCiudades();">
+                            <option value="">--Elija una Opción--</option>
+                            <option value="Amazonas">Amazonas</option>
+                            <option value="Antioquia">Antioquia</option>
+                            <option value="Arauca">Arauca</option>
+                            <option value="Atlántico">Atlántico</option>
+                            <option value="Bogotá D.C.">Bogotá D.C.</option>
+                            <option value="Bolívar">Bolívar</option>
+                            <option value="Boyacá">Boyacá</option>
+                            <option value="Caldas">Caldas</option>
+                            <option value="Caquetá">Caquetá</option>
+                            <option value="Casanare">Casanare</option>
+                            <option value="Cauca">Cauca</option>
+                            <option value="Cesar">Cesar</option>
+                            <option value="Chocó">Chocó</option>
+                            <option value="Córdoba">Córdoba</option>
+                            <option value="Cundinamarca">Cundinamarca</option>
+                            <option value="Guainía">Guainía</option>
+                            <option value="Guaviare">Guaviare</option>
+                            <option value="Huila">Huila</option>
+                            <option value="La Guajira">La Guajira</option>
+                            <option value="Magdalena">Magdalena</option>
+                            <option value="Meta">Meta</option>
+                            <option value="Nariño">Nariño</option>
+                            <option value="Norte de Santander">Norte de Santander</option>
+                            <option value="Putumayo">Putumayo</option>
+                            <option value="Quindío">Quindío</option>
+                            <option value="Risaralda">Risaralda</option>
+                            <option value="San Andrés y Providencia">San Andrés y Providencia</option>
+                            <option value="Santander">Santander</option>
+                            <option value="Sucre">Sucre</option>
+                            <option value="Tolima">Tolima</option>
+                            <option value="Valle del Cauca">Valle del Cauca</option>
+                            <option value="Vaupés">Vaupés</option>
+                            <option value="Vichada">Vichada</option>
+                        </select><br>
+                            
+                
+                        <label for="00NDn00000FUJYt">Ciudad de residencia<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
+                        <br>
+
+                        <select name="00NDn00000FUJYt" id="00NDn00000FUJYt" required title="Ciudad de residencia">
+                            
+                        </select>
+
+                    </fieldset>
                 </section>
                 <section class="seccion-2">
                     <fieldset>

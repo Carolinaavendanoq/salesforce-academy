@@ -8,143 +8,61 @@ abbr{
 }
 
 fieldset{
-    width: 25px;
     border: none;
-    margin: 15px 0px;
 }
 
 fieldset, #titulo-form{
-    border-bottom-style: dotted;
-    border-color: #0CB0E4;
-    border-bottom-width: 2px;
+    border-bottom: 2px dotted #0CB0E4;
 }
 
 form{
     background-color: #FFFFFF;
-    width: 60%;
-    margin: 20px auto;
     filter: drop-shadow(-1px -1px #F5F8FA) drop-shadow(0 1px #F1F5F8) drop-shadow(0 1px #EEF3F7) drop-shadow(0 1px #EAF0F5) drop-shadow(1px 1px #E3EBF1) drop-shadow(1px 1px #DCE6EE) drop-shadow(1px 1px #D1DFE9) drop-shadow(1px 1px #CDDBE6) drop-shadow(0px 0px 8px rgba(128, 145, 160, 0.5));
     border: 1px solid #EEF2F6;
+    margin: 20px auto;
 }
 
 h1{
     padding: 15px 0px;
 }
 
-h2{
-    font-size: 38px;
-    font-weight: 300;
-}
-
-
 h3{
-    font-size: 34px;
-    font-weight: 300;
     background: url("https://www.e-volution.co/wp-content/themes/yootheme/css/images/polygons-title.svg");
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: contain;
+    font-size: 22px;
+    font-weight: 300;
 }
 
-h1, h2, p, h3{
+h1, h2, h3{
     text-align: center;
 }
 
 input, select{
+    border: 1px solid #b8cddc;
+    color: #2c3345;
     font-size: 14px;
     border-radius: 4px;
-    border-width: 1px;
-    border-style: solid;
-    width: 310px;
+    width: 70%;
     height: 32px;
-    border-color: #b8cddc;
-    color: #2c3345;
-    margin-top: 0px;
     margin-bottom: 5px;
 }
 
 label{
     color: #5F707F;
     font-family: 'Varela Round', sans-serif;
-    font-weight: 600;
     font-size: 11px;
+    font-weight: 600;
     letter-spacing: 0.5px;
     line-height: 1.5;
-    margin-top: 5px;
-    margin-bottom: 0px;
 }
 
 legend{
     color: #0075d2;
     font-size: 11px;
     font-weight: 500;
-    margin-top: 0px;
     margin-bottom: 5px;
-}
-
-.fondo-azul p, .fondo-azul ul{
-   color: #DDE6EE;
-}
-
-.fondo-gris p, .fondo-gris ul{
-    color: #002260;
-}
-
-.fondo-azul p, .fondo-azul ul, .fondo-gris p, .fondo-gris ul{
-    font-size: 22px; 
-    font-weight: 300;
-}
-
-.fondo-gris h2{
-    color: #8091A0;
-    
-}
-
-.fondo-azul h2, .boton-enviar{
-    color: #FFFFFF;
-}
-
-.fondo-azul h2, .fondo-gris h2, #titulo-form{
-    font-weight: 500;
-    font-size: 18px;
-}
-
-#titulo-form{
-    color: #023E8A;
-    padding: 10px;
-    margin: 15px;
-}
-
-
-.boton-enviar, legend, label, h2{
-    text-transform: uppercase;
-}
-
-.boton-enviar{
-    background: #023E8A;
-    border-radius: 6px;
-    border-color: #118CD5;
-    height: 50px;
-    border-style: solid;
-    border-width: 2px;
-    cursor: pointer;
-    margin: 20px;
-}
-
-.trabajo-presencial{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.seccion-1, .seccion-2, #msj-impedimento{
-    display: flex;
-    justify-content: space-around;
-}
-
-
-.sel-multiple{
-    height: 100px;
 }
 
 .area-boton{
@@ -152,9 +70,17 @@ legend{
     justify-content: center;
 }
 
-.fondo-gris{
-    background-image: url("https://www.e-volution.co/wp-content/themes/yootheme/css/images/bg-geometric.jpg");
-    padding: 10px;
+.boton-enviar, legend, label, h2{
+    text-transform: uppercase;
+}
+
+.boton-enviar{
+    background: #023E8A;
+    border: 2px solid #118CD5;
+    cursor: pointer;
+    border-radius: 6px;
+    height: 50px;
+    margin: 20px;
 }
 
 .fondo-azul{
@@ -162,67 +88,73 @@ legend{
     repeating-linear-gradient(#41FBFF, #1CC8EA);
     background-color: #118CD5;
     background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     padding: 10px 10px 20px;
 }
 
-.fondo-azul, .fondo-gris{
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-.img-sf{
-    width: 200px;
-}
-
-.invitacion, .presentacion, .publico-objetivo, .beneficios, .proceso-seleccion,.terminos-condiciones, .divide-pag{
-    width: 750px;
-    margin: auto;
-}
-
-.publico-objetivo{
-    height: 300px;
-}
-
-.divide-pag{
-    position: relative;
-    left: 410px;
-    top: 250px;
-    width: 1070px;
+.boton-enviar{
+    color: #FFFFFF;
 }
 
 #titulo-aspira, #experiencia-laboral, #lead_source, .check{
     display: none;
 }
 
-blockquote{
-    width: 750px;
-    font-family: 'Alma Mono', 'DM Mono', 'courier new', courier, monospace;
-    font-size: 22px;
-    line-height: 1.4;
-    border-left: 5px double #2DE3F8;
-    padding: 20px 40px;
-    color: #0054B4;
-    font-weight: 400;
-    letter-spacing: -0.2px;
-    word-spacing: -2px;
+#titulo-form{
+    color: #023E8A;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px;
+    margin: 15px;
 }
 
+@media (min-width: 460px){
 
-.multiple{
-    text-transform:capitalize;
 }
 
-.field-set-uno{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    row-gap: 2px;
+@media (min-width: 768px){
+   
 }
 
-.fiel-set-dos{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-}
+@media (min-width: 1279px){
+    
+    fieldset{
+        margin: 15px 0px;
+    }
+    
+    
+    form{
+        width: 60%;
+    }
+    
+    h3{
+        font-size: 34px;
+    }
 
+    input, select{
+        width: 310px;
+    }
+    
+    
+    #titulo-form{
+        font-size: 18px;
+    }
+    
+    
+    .seccion-1, .seccion-2{
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    
+    .img-sf{
+        width: 200px;
+    }
+
+    
+}
+/*
 @media screen and (max-width: 400px){
     .content-section{
         display: flex;
@@ -260,3 +192,4 @@ blockquote{
     }
 
 }
+*/

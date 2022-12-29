@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="leadform.css">
-    <title>Formulario Inscripción</title>
+    <title>Formulario inscripción</title>
 </head>
 <body>
     <div class="fondo-azul">
         <h1><img class="img-sf" src="evolution-logo.png" alt="Logo Salesforce"></h1>
-        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" >
             
             <h3>¿Quieres hacer parte de esta nueva oportunidad?</h3>
             <div id="formulario">
                 <h2 id="titulo-form">Formulario de inscripción</h2>
-                <input type=hidden name="oid" value="00DDn000004Lt5Y">
-                <input type=hidden name="retURL" value="https://www.e-volution.co/es/somos-diseno-desarrollo-tecnologia/">
+                <input id="oid" type=hidden name="oid" value="00DDn000004Lt5Y">
+                <input id="retURL" type=hidden name="retURL" value="https://www.e-volution.co/es/somos-diseno-desarrollo-tecnologia/">
                 
                 <input  id="00NDn00000FTSmW" name="00NDn00000FTSmW" type="checkbox" value="1" checked class="check"/><br>
 
@@ -55,7 +55,7 @@
                         <label for="00NDn00000FTR2t">Tipo de Identificación:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                         <br>
                         <select  id="00NDn00000FTR2t" name="00NDn00000FTR2t" title="Tipo de Identificación" required>
-                            <option value="">--Elija una Opción--</option>
+                            <option value="">--Ninguno--</option>
                             <option value="Tarjeta de Identidad">Tarjeta de Identidad</option>
                             <option value="Cédula de Ciudadanía">Cédula de Ciudadanía</option>
                             <option value="Cédula de Extranjería">Cédula de Extranjería</option>
@@ -69,16 +69,11 @@
                         <br>
                         <input id="fecha-nacimiento" type="date" class="fecha-elegida" required>
 
-                        <!--
-                            falta campo para que guarde el valor
-                        -->
-                        <label for="">Aspiración Salarial:<abbr title="Requerido" aria-label="Requerido">  </abbr></label>
-                        <br>
-                        <input  id="" maxlength="20" name="" size="20" type="number" /><br>
-
                         <span class="dateInput dateOnlyInput">
                             <input  id="00NDn00000FTTBH" name="00NDn00000FTTBH" size="12" type="text" class="check"/>
                         </span><br>
+                        
+
                     </fieldset>
                     <fieldset>
                         <legend>Información de contacto</legend>
@@ -93,7 +88,7 @@
                         <label for="00NDn00000FTrRm">Departamento de residencia<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                         <br>
                         <select  id="00NDn00000FTrRm" name="00NDn00000FTrRm" title="Departamento de residencia" required onchange="cargarCiudades();">
-                            <option value="">--Elija una Opción--</option>
+                            <option value="">--Ninguno--</option>
                             <option value="Amazonas">Amazonas</option>
                             <option value="Antioquia">Antioquia</option>
                             <option value="Arauca">Arauca</option>
@@ -132,10 +127,12 @@
                 
                         <label for="00NDn00000FUJYt">Ciudad de residencia<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                         <br>
-
                         <select name="00NDn00000FUJYt" id="00NDn00000FUJYt" required title="Ciudad de residencia">
                             
-                        </select>
+                        </select><br>
+                        <label for="00NDn00000J9CQa">Aspiración Salarial:</label>
+                        <br>
+                        <input  id="00NDn00000J9CQa" maxlength="20" name="00NDn00000J9CQa" size="20" type="number" /><br>
 
                     </fieldset>
                 </section>
@@ -145,7 +142,7 @@
                         <label for="00NDn00000FTSEH">Nivel de escolaridad:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                         <br>
                         <select  id="00NDn00000FTSEH" name="00NDn00000FTSEH" title="Nivel de escolaridad" required>
-                            <option value="">--Elija una Opción--</option>
+                            <option value="">--Ninguno--</option>
                             <option value="Bachiller">Bachiller</option>
                             <option value="Técnico">Técnico</option>
                             <option value="Tecnólogo">Tecnólogo</option>
@@ -166,24 +163,24 @@
                         <label for="00NDn00000FTTMv">¿Actualmente está estudiando?:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                         <br>
                         <select  id="00NDn00000FTTMv" name="00NDn00000FTTMv" title="¿Actualmente está estudiando?" required onchange="mostrarEducActual();">
-                            <option value="">--Elija una Opción--</option>
+                            <option value="">--Ninguno--</option>
                             <option value="SI">SI</option>
                             <option value="No">No</option>
                         </select><br>
 
                         <div id="titulo-aspira">
-                            <label for="00NDn00000FTTR8">Título al que aspira::<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
+                            <label for="00NDn00000FTTR8">Título al que aspira:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                             <br>
                             <input  id="00NDn00000FTTR8" maxlength="255" name="00NDn00000FTTR8" size="20" type="text" class="campo-requerido"/><br>
                         
-                            <label for="00NDn00000FTd1C">Institución educativa actual::<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
+                            <label for="00NDn00000FTd1C">Institución educativa actual:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                             <br>
                             <input  id="00NDn00000FTd1C" maxlength="255" name="00NDn00000FTd1C" size="20" type="text" class="campo-requerido"/><br>
                 
-                            <label for="00NDn00000FTTRD">Nivel actual::<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
+                            <label for="00NDn00000FTTRD">Nivel actual:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                             <br>
                             <select  id="00NDn00000FTTRD" name="00NDn00000FTTRD" title="Nivel actual" class="campo-requerido">
-                                <option value="">--Elija una Opción--</option>
+                                <option value="">--Ninguno--</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -200,7 +197,7 @@
                         <label for="00NDn00000FTTZx">Nivel de inglés:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                         <br>
                         <select  id="00NDn00000FTTZx" name="00NDn00000FTTZx" title="Nivel de inglés" required>
-                            <option value="">--Elija una Opción--</option>
+                            <option value="">--Ninguno--</option>
                             <option value="A1">A1</option>
                             <option value="A2">A2</option>
                             <option value="B1">B1</option>
@@ -211,93 +208,98 @@
                     </fieldset>
                     <fieldset>
                         <legend>Información laboral</legend>
-                        <!--
-                            organizar los valores y creacion del campo
-                        -->
-                        <label for="">Tipo de vinculación que busca:</label>
+
+                        <label for="00NDn00000J9CY6">Tipo de vinculación que busca:</label>
                         <br>
-                        <select  id="" name="" title="Modalidad Laboral">
-                            <option value="">--Elija una Opción--</option>
+                        <select  id="00NDn00000J9CY6" name="00NDn00000J9CY6" title="Tipo de vinculación que busca">
+                            <option value="">--Ninguno--</option>
                             <option value="Freelance">Freelance</option>
                             <option value="Tiempo completo">Tiempo completo</option>
-                            <option value=">Medio tiempo">Medio tiempo</option>
+                            <option value="Medio tiempo">Medio tiempo</option>
                         </select><br>
-                        <label for="">Modalidad de trabajo:</label>
+                            
+                        <label for="00NDn00000J9CcY">Modalidad de trabajo:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                         <br>
-                        <select  id="" name="" title="Modalidad Laboral">
-                            <option value="">--Elija una Opción--</option>
+                        <select  id="00NDn00000J9CcY" name="00NDn00000J9CcY" title="Modalidad de trabajo" required>
+                            <option value="">--Ninguno--</option>
                             <option value="Presencial">Presencial</option>
                             <option value="Virtual">Virtual</option>
-                            <option value="Hibrido">Hibrido</option>
+                            <option value="Híbrido">Híbrido</option>
                         </select><br>
-                        <!--
-                            
-                        -->
-                        <label for="00NDn00000FTTja">¿Tiene experiencia laboral?:</label>
+                        
+                        <label for="00NDn00000FTTja">¿Tiene experiencia laboral?:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                         <br>
-                        <select  id="00NDn00000FTTja" name="00NDn00000FTTja" title="¿Tiene experiencia laboral?" onchange="mostrarExpLaboral();">
-                            <option value="">--Elija una Opción--</option>
+                        <select  id="00NDn00000FTTja" name="00NDn00000FTTja" title="¿Tiene experiencia laboral?" onchange="mostrarExpLaboral();" required>
+                            <option value="">--Ninguno--</option>
                             <option value="SI">SI</option>
                             <option value="No">No</option>
                         </select><br>
                         <div id="experiencia-laboral">
                             <label for="00NDn00000FTTsi">Nombre de la empresa:</label>
                             <br>
-                            <input  id="00NDn00000FTTsi" maxlength="255" name="00NDn00000FTTsi" size="20" type="text" /><br>
+                            <input  id="00NDn00000FTTsi" maxlength="255" name="00NDn00000FTTsi" size="20" type="text" class="limpia-campos"/><br>
                         
                             <label for="title">Cargo:</label>
                             <br>
-                            <input  id="title" maxlength="255" name="title" size="20" type="text" /><br>
+                            <input  id="title" maxlength="255" name="title" size="20" type="text" class="limpia-campos"/><br>
                 
                             <label for="00NDn00000FTTtg">Jefe inmediato:</label>
                             <br>
-                            <input  id="00NDn00000FTTtg" maxlength="255" name="00NDn00000FTTtg" size="20" type="text" oonkeypress="return ((event.charCode == 32) || (event.charCode == 209) || (event.charCode == 241) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))"/><br>
+                            <input  id="00NDn00000FTTtg" maxlength="255" name="00NDn00000FTTtg" size="20" type="text" oonkeypress="return ((event.charCode == 32) || (event.charCode == 209) || (event.charCode == 241) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" class="limpia-campos"/><br>
                 
                             <label for="fecha-inicio">Fecha de inicio:</label>
                             <br>
-                            <input id="fecha-inicio" type="date"  class="fecha-elegida">
+                            <input id="fecha-inicio" type="date"  class="fecha-elegida limpia-campos">
                             <span class="dateInput dateOnlyInput">
-                                <input  id="00NDn00000FTUFZ" name="00NDn00000FTUFZ" size="12" type="text" class="check" />
+                                <input  id="00NDn00000FTUFZ" name="00NDn00000FTUFZ" size="12" type="text" class="check limpia-campos" />
                             </span><br>
                 
                             <label for="fecha-finalizacion">Fecha de finalización:</label>
                             <br>
-                            <input id="fecha-finalizacion" type="date" class="fecha-elegida" >
+                            <input id="fecha-finalizacion" type="date" class="fecha-elegida limpia-campos" >
 
                             <span class="dateInput dateOnlyInput">
-                                <input  id="00NDn00000FTUJw" name="00NDn00000FTUJw" size="12" type="text" class="check"/>
+                                <input  id="00NDn00000FTUJw" name="00NDn00000FTUJw" size="12" type="text" class="check limpia-campos"/>
                             </span><br>
 
                             <label for="00NDn00000FTTsx">Nombre de la empresa:</label>
                             <br>
-                            <input  id="00NDn00000FTTsx" maxlength="255" name="00NDn00000FTTsx" size="20" type="text" /><br>
+                            <input  id="00NDn00000FTTsx" maxlength="255" name="00NDn00000FTTsx" size="20" type="text" class="limpia-campos"/><br>
                     
                             <label for="00NDn00000FTTtb">Cargo:</label>
                             <br>
-                            <input  id="00NDn00000FTTtb" maxlength="255" name="00NDn00000FTTtb" size="20" type="text" /><br>
+                            <input  id="00NDn00000FTTtb" maxlength="255" name="00NDn00000FTTtb" size="20" type="text" class="limpia-campos"/><br>
                             
                             <label for="00NDn00000FTU75">Jefe inmediato:</label>
                             <br>
-                            <input  id="00NDn00000FTU75" maxlength="255" name="00NDn00000FTU75" size="20" type="text" onkeypress="return ((event.charCode == 32) || (event.charCode == 209) || (event.charCode == 241) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))"/><br>
+                            <input  id="00NDn00000FTU75" maxlength="255" name="00NDn00000FTU75" size="20" type="text" onkeypress="return ((event.charCode == 32) || (event.charCode == 209) || (event.charCode == 241) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" class="limpia-campos"/><br>
                     
                             <label for="fecha-inicio2">Fecha de inicio:</label>
                             <br>
-                            <input id="fecha-inicio2" type="date" class="fecha-elegida">
+                            <input id="fecha-inicio2" type="date" class="fecha-elegida limpia-campos">
                             <span class="dateInput dateOnlyInput">
-                                <input  id="00NDn00000FTUJr" name="00NDn00000FTUJr" size="12" type="text" class="check"/>
+                                <input  id="00NDn00000FTUJr" name="00NDn00000FTUJr" size="12" type="text" class="check limpia-campos"/>
                             </span><br>
                     
                             <label for="fecha-finalizacion2">Fecha de finalización: </label>
                             <br>
-                            <input id="fecha-finalizacion2" type="date" class="fecha-elegida">
+                            <input id="fecha-finalizacion2" type="date" class="fecha-elegida limpia-campos">
                             <span class="dateInput dateOnlyInput">
-                                <input  id="00NDn00000FTUK6" name="00NDn00000FTUK6" size="12" type="text" class="check"/>
+                                <input  id="00NDn00000FTUK6" name="00NDn00000FTUK6" size="12" type="text" class="check limpia-campos"/>
                             </span><br>
                         </div>
+                        <label for="archivo">Adjuntar hoja de vida</label>
+                        <br>
+                        <input id = "archivo" type="file" accept=".pdf" onchange="archivoTexto();">
+                        <input id="00NDn00000J9QXX" name="00NDn00000J9QXX" type="text" class="check">
                     </fieldset>
                 </section>
                 <div class="area-boton">
-                    <input class="boton-enviar" type="submit" name="submit" value="Enviar">
+                    <!--<button id="submit-button" name="submit" class="boton-enviar" type="button">Enviar</button>
+                    <input id="submit-button" class="boton-enviar" type="submit" name="submit" value="Enviar">
+                    <button type="button" id="submit-button" onclick="postLeadToSFDC()" class="boton-enviar">Enviar</button>-->
+                    <input  class="boton-enviar" type="submit" name="submit" value="Enviar">
+                    
                 </div>
             </div>
         </form>

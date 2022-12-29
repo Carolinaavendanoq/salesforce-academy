@@ -44,10 +44,10 @@ function mostrarEducActual() {
     }else if(seleccion == 'No'){
         document.getElementById('titulo-aspira').style.display = 'none';
         document.querySelectorAll(".campo-requerido").forEach(campo => campo.required =false);
-
         document.querySelectorAll(".campo-requerido").forEach(campo => campo.value = '');
     }else{
         document.getElementById('titulo-aspira').style.display = 'none';
+        document.querySelectorAll(".campo-requerido").forEach(campo => campo.value = '');
     }
 }
 
@@ -59,20 +59,12 @@ function mostrarExpLaboral() {
         document.getElementById('experiencia-laboral').style.display = 'block';
     }else if(seleccion == 'No'){
         document.getElementById('experiencia-laboral').style.display = 'none';
+        document.querySelectorAll(".limpia-campos").forEach(campo => campo.value = '');
     }else{
         document.getElementById('experiencia-laboral').style.display = 'none';
+        document.querySelectorAll(".limpia-campos").forEach(campo => campo.value = '');
     }
 }
-/*
-function verFecha() {
-    let fecha = document.getElementById("fecha-nacimiento");
-    let valorFecha = fecha.value;
-    let fechaSinGuion = valorFecha.split('-');
-    let fechaReversada = fechaSinGuion.reverse();
-    let fechaFormateada = fechaReversada.join('/');
-
-    document.getElementById("00NDn00000FTTBH").value = fechaFormateada;
-}*/
 
 function cargarCiudades() {
     let listaCiudades = {
@@ -133,19 +125,71 @@ function cargarCiudades() {
         });
     }
 }
-
-function mostrarForm() {
-    let seleccion = document.getElementById("00NDn00000FTS5D").value;
-    
-    if (seleccion == 'Sí') {
-        document.getElementById('formulario').style.display = 'block';
-        document.getElementById('msj-impedimento').style.display = 'none';
-
-    }else if(seleccion == 'No'){
-        document.getElementById('msj-impedimento').style.display = 'flex';
-        document.getElementById('formulario').style.display = 'none';
-    }else{
-        document.getElementById('msj-impedimento').style.display = 'none';
-        document.getElementById('formulario').style.display = 'none';
-    }
+function archivoTexto() {
+    let archivoObtenido = document.getElementById("archivo").value;
+    document.getElementById("00NDn00000J9QXX").value = archivoObtenido;
 }
+
+/*
+function postLeadToSFDC() {
+
+    const requestOptions = {
+      method: 'POST',
+      mode: 'no-cors',
+    };
+  
+    const oid = document.getElementById('oid').value;
+    const retUrl = document.getElementById('retURL').value;
+    const activo = document.getElementById('00NDn00000FTSmW').value;
+    const origen = document.getElementById('lead_source').value;
+    const compania = document.getElementById('company').value;
+    const nombre = document.getElementById('first_name').value;
+    const apellido = document.getElementById('last_name').value;
+    const tipoIdetificacion = document.getElementById('00NDn00000FTR2t').value;
+    const numeroIdentificacion = document.getElementById('00NDn00000FTR2y').value;
+    const fechaNacimiento = document.getElementById('00NDn00000FTTBH').value;
+    const aspiracionSalarial = document.getElementById('00NDn00000J9CQa').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const departamentoResidencia = document.getElementById('00NDn00000FTrRm').value;
+    const ciudadResidencia = document.getElementById('00NDn00000FUJYt').value;
+    const nivelEscolaridad = document.getElementById('00NDn00000FTSEH').value;
+    const tituloAdquirido = document.getElementById('00NDn00000FTSEb').value;
+    const instEducativa = document.getElementById('00NDn00000FTSHV').value;
+    const estaEstudiando = document.getElementById('00NDn00000FTTMv').value;
+    console.log(estaEstudiando);
+    const tituloAspira = document.getElementById('00NDn00000FTTR8').value;
+    const instEducActual = document.getElementById('00NDn00000FTd1C').value;
+    const nivelActual = document.getElementById('00NDn00000FTTRD').value;
+    const nivelIngles = document.getElementById('00NDn00000FTTZx').value;
+    const tipoVinculacion = document.getElementById('00NDn00000J9CY6').value;
+    const modalidadTrabajo = document.getElementById('00NDn00000J9CcY').value;
+    const experienciaLaboral = document.getElementById('00NDn00000FTTja').value;
+    const nombreEmpresa = document.getElementById('00NDn00000FTTsi').value;
+    const cargo = document.getElementById('title').value;
+    const jefeInmediato = document.getElementById('00NDn00000FTTtg').value;
+    const fechaInicio = document.getElementById('00NDn00000FTUFZ').value;
+    const fechaFinalizacion = document.getElementById('00NDn00000FTUJw').value;
+    const otraEmpresa = document.getElementById('00NDn00000FTTsx').value;
+    const otroCargo = document.getElementById('00NDn00000FTTtb').value;
+    const otroJefe = document.getElementById('00NDn00000FTU75').value;
+    const otraFechaInicio = document.getElementById('00NDn00000FTUJr').value;
+    const otraFechaFin = document.getElementById('00NDn00000FTUK6').value;
+    const archivo = document.getElementById('archivo').value;
+    
+    fetch(
+      `https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&oid=${oid}&retURL=${retUrl}&00NDn00000FTSmW=${activo}&lead_source=${origen}&company=${compania}&first_name=${nombre}&last_name=${apellido}&00NDn00000FTR2t=${tipoIdetificacion}&00NDn00000FTR2y=${numeroIdentificacion}&00NDn00000FTTBH=${fechaNacimiento}&00NDn00000J9CQa=${aspiracionSalarial}&email=${email}&phone=${phone}&00NDn00000FTrRm=${departamentoResidencia}&00NDn00000FUJYt=${ciudadResidencia}&00NDn00000FTSEH=${nivelEscolaridad}&00NDn00000FTSEb=${tituloAdquirido}&00NDn00000FTSHV=${instEducativa}&00NDn00000FTTMv=${estaEstudiando}&00NDn00000FTTR8=${tituloAspira}&00NDn00000FTd1C=${instEducActual}&00NDn00000FTTRD=${nivelActual}&00NDn00000FTTZx=${nivelIngles}&00NDn00000J9CY6=${tipoVinculacion}&00NDn00000J9CcY=${modalidadTrabajo}&00NDn00000FTTja=${experienciaLaboral}&00NDn00000FTTsi=${nombreEmpresa}&title=${cargo}&00NDn00000FTTtg=${jefeInmediato}&00NDn00000FTUFZ=${fechaInicio}&00NDn00000FTUJw=${fechaFinalizacion}&00NDn00000FTTsx=${otraEmpresa}&00NDn00000FTTtb=${otroCargo}&00NDn00000FTU75=${otroJefe}&00NDn00000FTUJr=${otraFechaInicio}&00NDn00000FTUK6=${otraFechaFin}&00NDn00000J9QXX=${archivo}`,
+      requestOptions
+    )
+      .then((response) => response.text())
+      .then((result) => console.log(result))
+      .catch((error) => console.log('error', error));
+  }
+  
+ */
+
+
+
+
+
+  

@@ -7,30 +7,29 @@
     <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="leadform.css">
+    <link rel="shortcut icon" href="https://www.e-volution.co/wp-content/themes/yootheme/cache/evo-favicon-540-d0a4e1f9.png" type="image/x-icon">
     <title>Formulario inscripción</title>
 </head>
 <body>
     <div class="fondo-azul">
-        <h1><img class="img-sf" src="logo-evo.png" alt="Logo Salesforce"></h1>
+        
         <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" >
-            
+            <h1><img class="img-sf" src="logo-evo.png" alt="Logo Salesforce"></h1>
             <h3>¿Quieres hacer parte de esta nueva oportunidad?</h3>
             <div id="formulario">
                 <h2 id="titulo-form">Formulario de inscripción</h2>
                 <input id="oid" type=hidden name="oid" value="00DDn000004Lt5Y">
-                <input id="retURL" type=hidden name="retURL" value="https://www.e-volution.co/es/somos-diseno-desarrollo-tecnologia/">
-                
-                <input  id="00NDn00000FTSmW" name="00NDn00000FTSmW" type="checkbox" value="1" checked class="check"/><br>
-
+                <input id="retURL" type=hidden name="retURL" value="https://www.e-volution.co/es/somos-diseno-desarrollo-tecnologia/">  
+                <input  id="00NDn00000FTSmW" name="00NDn00000FTSmW" type="checkbox" value="1" checked class="check"/>
                 <select  id="lead_source" name="lead_source">
                     <option value="">--Elija una Opción--</option>
                     <option value="Web" selected = "true">Web</option>
                     <option value="Other">Other</option>
-                </select><br>
-
-                <input  id="company" maxlength="40" name="company" size="20" type="text" value="E-volution" class="check"/><br>
-                
-
+                </select>
+                <input  id="company" maxlength="40" name="company" size="20" type="text" value="E-volution" class="check"/>
+                <select  id="Campaign_ID" name="Campaign_ID" class="check">
+                    <option id="campania-Id" value=""></option>
+                </select>
 
             
             <!--  ----------------------------------------------------------------------  -->
@@ -305,5 +304,14 @@
         </form>
     </div>
     <script src="leadform.js"></script>
+    <script>
+        const queryString = window.location.search;
+
+        const urlParams = new URLSearchParams(queryString);
+
+        const product = urlParams.get('campain');
+
+        document.getElementById("campania-Id").setAttribute('value',product);
+    </script>
 </body>
 </html>   

@@ -1,6 +1,5 @@
 document.querySelectorAll(".fecha-elegida").forEach(fechita => fechita.addEventListener("change", e => {
     const identificador = e.target.getAttribute("id");
-    console.log(identificador);
     let fecha = document.getElementById(identificador);
     let valorFecha = fecha.value;
     

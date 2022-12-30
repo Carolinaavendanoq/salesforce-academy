@@ -62,6 +62,10 @@ legend{
     margin-bottom: 5px;
 }
 
+.archivo-hv{
+    border: none;
+}
+
 .area-boton{
     display: flex;
     justify-content: center;

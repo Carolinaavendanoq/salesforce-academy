@@ -21,6 +21,9 @@
                 <input id="oid" type=hidden name="oid" value="00DDn000004Lt5Y">
                 <input id="retURL" type=hidden name="retURL" value="https://www.e-volution.co/es/somos-diseno-desarrollo-tecnologia/">  
                 <input  id="00NDn00000FTSmW" name="00NDn00000FTSmW" type="checkbox" value="1" checked class="check"/>
+                <select  id="recordType" name="recordType" class="check">
+                    <option id=“tipoRegistro-Id" value=""></option>
+                </select>
                 <select  id="lead_source" name="lead_source">
                     <option value="">--Elija una Opción--</option>
                     <option value="Web" selected = "true">Web</option>
@@ -297,21 +300,38 @@
                     <!--<button id="submit-button" name="submit" class="boton-enviar" type="button">Enviar</button>
                     <input id="submit-button" class="boton-enviar" type="submit" name="submit" value="Enviar">
                     <button type="button" id="submit-button" onclick="postLeadToSFDC()" class="boton-enviar">Enviar</button>-->
-                    <input  class="boton-enviar" type="submit" name="submit" value="Enviar">
-                    
+                    <input  class="boton-enviar" type="submit" name="submit" value="Enviar" onclick="sendEmail();">
                 </div>
             </div>
         </form>
     </div>
-    <script src="leadform.js"></script>
-    <script>
-        const queryString = window.location.search;
+        <script>
+            const queryString = window.location.search;
 
-        const urlParams = new URLSearchParams(queryString);
+            const urlParams = new URLSearchParams(queryString);
 
-        const product = urlParams.get('campain');
+            const product = urlParams.get('campain');
 
-        document.getElementById("campania-Id").setAttribute('value',product);
-    </script>
+            document.getElementById("campania-Id").setAttribute('value',product);
+
+            const tipo = urlParams.get('tipo');
+            console.log(tipo);
+            const primerId='';
+            switch (tipo){
+                case '1':
+                    console.log('registro de salesforce');
+                    primerId = '012Dn0000005rYgIAI';
+                    break;
+                    
+                case '2':
+                    console.log('registro de evo');
+                    primerId = '012Dn0000006KNBIA2';
+                    break;
+            }
+            document.getElementById("tipoRegistro-Id").setAttribute('value', primerId);
+
+        </script>
+        <script src="leadform.js"></script>
+        
 </body>
 </html>   

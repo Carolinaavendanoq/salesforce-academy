@@ -105,7 +105,6 @@ function cargarCiudades() {
     }
 
 
-
     let departamentos = document.getElementById('00NDn00000FTrRm');
     let ciudades = document.getElementById('00NDn00000FUJYt');
     let departamentoSeleccionado = departamentos.value;
@@ -124,6 +123,7 @@ function cargarCiudades() {
         });
     }
 }
+
 function archivoTexto() {
     let archivoObtenido = document.getElementById("archivo").value;
     document.getElementById("00NDn00000J9QXX").value = archivoObtenido;
@@ -186,9 +186,5 @@ function postLeadToSFDC() {
   }
   
  */
-
-
-
-
 
   

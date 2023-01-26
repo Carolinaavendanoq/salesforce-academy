@@ -124,12 +124,12 @@ function cargarCiudades() {
     }
 }
 
+/*
 function archivoTexto() {
     let archivoObtenido = document.getElementById("archivo").value;
     document.getElementById("00NDn00000J9QXX").value = archivoObtenido;
 }
 
-/*
 function postLeadToSFDC() {
 
     const requestOptions = {
@@ -187,4 +187,5 @@ function postLeadToSFDC() {
   
  */
 
-  
+
+//uekwfrdqugiihwzd

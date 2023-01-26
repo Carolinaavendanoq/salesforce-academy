@@ -12,18 +12,17 @@
 </head>
 <body>
     <div class="fondo-azul">
-        
-        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" >
+        <form id="form" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST" >
             <h1><img class="img-sf" src="logo-evo.png" alt="Logo Salesforce"></h1>
             <h3>¿Quieres hacer parte de esta nueva oportunidad?</h3>
             <div id="formulario">
                 <h2 id="titulo-form">Formulario de inscripción</h2>
                 <input id="oid" type=hidden name="oid" value="00DDn000004Lt5Y">
-                <input id="retURL" type=hidden name="retURL" value="https://www.e-volution.co/es/somos-diseno-desarrollo-tecnologia/">  
+                <input id="retURL" type=hidden name="retURL" value="https://www.e-volution.co/es/somos-diseno-desarrollo-tecnologia/">
+                <select id="recordType"name="recordType" class="check">
+                    <option id="tipoRegistro-Id" value=""></option>
+                </select>  
                 <input  id="00NDn00000FTSmW" name="00NDn00000FTSmW" type="checkbox" value="1" checked class="check"/>
-                <select  id="recordType" name="recordType" class="check">
-                    <option id=“tipoRegistro-Id" value=""></option>
-                </select>
                 <select  id="lead_source" name="lead_source">
                     <option value="">--Elija una Opción--</option>
                     <option value="Web" selected = "true">Web</option>
@@ -33,26 +32,16 @@
                 <select  id="Campaign_ID" name="Campaign_ID" class="check">
                     <option id="campania-Id" value=""></option>
                 </select>
-
-            
-            <!--  ----------------------------------------------------------------------  -->
-            <!--  NOTA: Estos campos son elementos de depuración opcionales. Elimine      -->
-            <!--  los comentarios de estas líneas si desea realizar una prueba en el      -->
-            <!--  modo de depuración.                                                     -->
-            <!--  <input type="hidden" name="debug" value=1>                              -->
-            <!--  <input type="hidden" name="debugEmail"                                  -->
-            <!--  value="academyevolution2022@gmail.com">                                 -->
-            <!--  ----------------------------------------------------------------------  -->
                 <section class="seccion-1">
                     <fieldset>
                         <legend>Información Personal</legend>
                         <label for="first_name">Nombre:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                         <br>
-                        <input  id="first_name" maxlength="40" name="first_name" size="20" type="text" onkeypress="return ((event.charCode == 32) || (event.charCode == 209) || (event.charCode == 241) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" required/><br>
+                        <input  id="first_name" maxlength="40" name="first_name" size="20" type="text"  required/><br>
                 
                         <label for="last_name">Apellidos:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                         <br>
-                        <input  id="last_name" maxlength="80" name="last_name" size="20" type="text" onkeypress="return ((event.charCode == 32) || (event.charCode == 209) || (event.charCode == 241) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" required/><br>
+                        <input  id="last_name" maxlength="80" name="last_name" size="20" type="text"  required/><br>
             
                         <label for="00NDn00000FTR2t">Tipo de Identificación:<abbr title="Requerido" aria-label="Requerido"> * </abbr></label>
                         <br>
@@ -247,7 +236,7 @@
                 
                             <label for="00NDn00000FTTtg">Jefe inmediato:</label>
                             <br>
-                            <input  id="00NDn00000FTTtg" maxlength="255" name="00NDn00000FTTtg" size="20" type="text" oonkeypress="return ((event.charCode == 32) || (event.charCode == 209) || (event.charCode == 241) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" class="limpia-campos"/><br>
+                            <input  id="00NDn00000FTTtg" maxlength="255" name="00NDn00000FTTtg" size="20" type="text" onkeypress="return ((event.charCode == 32) || (event.charCode == 209) || (event.charCode == 241) || (event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122))" class="limpia-campos"/><br>
                 
                             <label for="fecha-inicio">Fecha de inicio:</label>
                             <br>
@@ -290,48 +279,45 @@
                                 <input  id="00NDn00000FTUK6" name="00NDn00000FTUK6" size="12" type="text" class="check limpia-campos"/>
                             </span><br>
                         </div>
-                        <label for="archivo">Adjuntar hoja de vida</label>
                         <br>
-                        <input class= "archivo-hv" id = "archivo" type="file" accept=".pdf" onchange="archivoTexto();">
+                        <!--
+                        <label for="archivo">Adjuntar hoja de vida</label>
+                        <input class= "archivo-hv" id = "archivo"  name="archivo" type="file" accept=".pdf" onchange="archivoTexto();">
                         <input id="00NDn00000J9QXX" name="00NDn00000J9QXX" type="text" class="check">
+                        -->
+
                     </fieldset>
                 </section>
                 <div class="area-boton">
                     <!--<button id="submit-button" name="submit" class="boton-enviar" type="button">Enviar</button>
                     <input id="submit-button" class="boton-enviar" type="submit" name="submit" value="Enviar">
                     <button type="button" id="submit-button" onclick="postLeadToSFDC()" class="boton-enviar">Enviar</button>-->
-                    <input  class="boton-enviar" type="submit" name="submit" value="Enviar" onclick="sendEmail();">
+                    <input  class="boton-enviar" type="submit" name="submit" value="Enviar" >
                 </div>
             </div>
         </form>
     </div>
-        <script>
-            const queryString = window.location.search;
+    <script>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const product = urlParams.get('campain');
+        document.getElementById("campania-Id").value = product;
 
-            const urlParams = new URLSearchParams(queryString);
+        const tipo = urlParams.get('tipo');
+        let tipoRegistro;
+      
+        switch (tipo){
+            case '1':
+                tipoRegistro = '012Dn0000005rYg';
+                break;
+                
+            case '2':
+                tipoRegistro = '012Dn0000006KNB';
+                break;
+        }
+        document.getElementById("tipoRegistro-Id").value = tipoRegistro;
+    </script>
+    <script src="leadform.js"></script>   
 
-            const product = urlParams.get('campain');
-
-            document.getElementById("campania-Id").setAttribute('value',product);
-
-            const tipo = urlParams.get('tipo');
-            console.log(tipo);
-            const primerId='';
-            switch (tipo){
-                case '1':
-                    console.log('registro de salesforce');
-                    primerId = '012Dn0000005rYgIAI';
-                    break;
-                    
-                case '2':
-                    console.log('registro de evo');
-                    primerId = '012Dn0000006KNBIA2';
-                    break;
-            }
-            document.getElementById("tipoRegistro-Id").setAttribute('value', primerId);
-
-        </script>
-        <script src="leadform.js"></script>
-        
 </body>
 </html>   
